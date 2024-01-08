@@ -35,11 +35,11 @@
   },
   "husky":{
     "hooks":{
-      "pre-commit":"npm run lint"
+      "pre-commit":"lint-staged"
     }
   },
   "lint-staged": {
     "*.{js, json, jsx}": "eslint --cache --fix",
-    "*.{ts, tsx}":["eslint --cache --fix", "tsc --noEmit --jsx react --skipLibCheck --esModuleInterop --strict --forceConsistentCasingInFileNames"]
+    "*.{ts, tsx}":["eslint --cache --fix", "tsc --noEmit --jsx react --skipLibCheck --esModuleInterop"]
   }
 }

@@ -1,2 +1,2 @@
-let x:number =20;
-x="25";
+let x:number =20
+x="25"
