@@ -6,10 +6,10 @@
   "scripts": {
     "lint": "eslint .",
     "eslint:fix": "eslint . --fix",
-    "fix":"run-script-os",
+    "fix": "run-script-os",
     "fix:win32": "prettier-eslint --write %INIT_CWD%/src/**/*.js",
-    "fix:darwin:linux":"prettier-eslint --write $PWD/src/**/*.js",
-    "check-types":"tsc -p tsconfig.json --noEmit"
+    "fix:darwin:linux": "prettier-eslint --write $PWD/src/**/*.js",
+    "check-types": "tsc -p tsconfig.json --noEmit"
   },
   "keywords": [],
   "author": "",
