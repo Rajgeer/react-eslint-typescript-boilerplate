@@ -1,5 +1,3 @@
-import React from "react"
-
-export default function HelloWorld() {
-  return <div>HelloWorld</div>
-}
+import React from "react";
+const HelloWorld:React.FC = () => <div>HelloWorld</div>;
+export default HelloWorld;

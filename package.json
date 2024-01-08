@@ -9,7 +9,8 @@
     "fix": "run-script-os",
     "fix:win32": "prettier-eslint --write %INIT_CWD%/src/**/*.js",
     "fix:darwin:linux": "prettier-eslint --write $PWD/src/**/*.js",
-    "check-types": "tsc -p tsconfig.json --noEmit"
+    "check-types": "tsc -p tsconfig.json --noEmit",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -21,12 +22,23 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.2",
     "eslint-plugin-react": "^7.33.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
     "prettier": "^3.1.1",
     "prettier-eslint-cli": "^8.0.1",
     "run-script-os": "^1.1.6",
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "mrm-task-lint-staged": "^7.1.22",
     "react": "^18.2.0"
+  },
+  "husky":{
+    "hooks":{
+      "pre-commit":"npm run lint"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
   }
 }
