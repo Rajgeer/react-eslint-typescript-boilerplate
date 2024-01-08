@@ -39,6 +39,7 @@
     }
   },
   "lint-staged": {
-    "*.{js, json, jsx}": "eslint --cache --fix"
+    "*.{js, json, jsx}": "eslint --cache --fix",
+    "*.{ts, tsx}":["eslint --cache --fix", "tsc --noEmit --jsx react --skipLibCheck --esModuleInterop"]
   }
 }
