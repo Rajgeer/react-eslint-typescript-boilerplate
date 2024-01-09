@@ -30,16 +30,18 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "mrm-task-lint-staged": "^7.1.22",
     "react": "^18.2.0"
   },
-  "husky":{
-    "hooks":{
-      "pre-commit":"lint-staged"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
     "*.{js, json, jsx}": "eslint --cache --fix",
-    "*.{ts, tsx}":["eslint --cache --fix", "tsc --noEmit --jsx react --skipLibCheck --esModuleInterop"]
+    "*.{ts, tsx}": [
+      "eslint --cache --fix",
+      "tsc --noEmit --jsx react --skipLibCheck --esModuleInterop"
+    ]
   }
 }
