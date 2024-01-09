@@ -13,7 +13,6 @@
     "fix:win32": "prettier-eslint --write %INIT_CWD%/src/**/*.js",
     "fix:darwin:linux": "prettier-eslint --write $PWD/src/**/*.js",
     "check-types": "tsc -p tsconfig.json --noEmit",
-    "prepare": "husky install",
     "test": "jest"
   },
   "keywords": [],
