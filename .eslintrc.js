@@ -9,8 +9,14 @@ module.exports = {
     },
   },
   plugins: ["react", "@typescript-eslint"],
-  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
+  extends: [
+    "eslint:recommended", 
+    "plugin:@typescript-eslint/recommended", 
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
   rules: {
-    "semi":["error", "always"]
+    "semi":["error", "always"],
+    "quotes": ["error", "double"]
   },
 }
