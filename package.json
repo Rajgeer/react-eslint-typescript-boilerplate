@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "jest": {
+    "verbose": true
+  },
   "scripts": {
     "lint": "eslint .",
     "eslint:fix": "eslint . --fix",
@@ -10,7 +13,8 @@
     "fix:win32": "prettier-eslint --write %INIT_CWD%/src/**/*.js",
     "fix:darwin:linux": "prettier-eslint --write $PWD/src/**/*.js",
     "check-types": "tsc -p tsconfig.json --noEmit",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -23,7 +27,9 @@
     "eslint-plugin-prettier": "^5.1.2",
     "eslint-plugin-react": "^7.33.2",
     "husky": "^8.0.3",
+    "jest": "^29.7.0",
     "lint-staged": "^15.2.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^3.1.1",
     "prettier-eslint-cli": "^8.0.1",
     "run-script-os": "^1.1.6",
