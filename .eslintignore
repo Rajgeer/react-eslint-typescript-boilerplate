@@ -1,2 +1,4 @@
 .eslintrc.js
+tailwind.config.js
+/webpack
 *.test.js
