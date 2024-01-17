@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(false);
-  const toggle = () => setOpenDropdown(!openDropdown);
+  // const [openDropdown, setOpenDropdown] = useState(false);
+  // const toggle = () => setOpenDropdown(!openDropdown);
   const toggleMenu = () => setMobileMenuOpen(!mobileMenuOpen);
   console.log({ mobileMenuOpen });
   return (
@@ -15,7 +14,7 @@ export default function Example() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-1.5 p-1.5">
             <span className="">Webkits</span>
             {/* <img
               className="h-8 w-auto"
@@ -214,9 +213,9 @@ export default function Example() {
       {mobileMenuOpen && (
         <div className="lg:hidden" role="dialog" aria-modal={false}>
           <div className="fixed inset-0 z-10"></div>
-          <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
+              <a href="/" className="-m-1.5 p-1.5">
                 <span className="">Webkits</span>
                 {/* <img
                   className="h-8 w-auto"

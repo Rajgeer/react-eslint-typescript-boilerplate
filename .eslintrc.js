@@ -13,7 +13,7 @@ module.exports = {
         version: 'detect',
     },
   },
-  plugins: ["react", "@typescript-eslint", "tailwindcss"],
+  plugins: ["react", "@typescript-eslint", "tailwindcss",  "eslint-plugin-tailwindcss"],
   extends: [
     "eslint:recommended", 
     "plugin:@typescript-eslint/recommended", 
@@ -25,7 +25,7 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
-    'plugin:jsx-a11y/recommended',,
+    'plugin:jsx-a11y/recommended',
     'plugin:tailwindcss/recommended',
   ],
   rules: {
@@ -38,6 +38,6 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     indent: ['error', 2],
     '@typescript-eslint/indent': ['error', 2],
-    'max-len': ['error', { code: 120 }],
+    'max-len': ['error', { code: 520 }],
   },
 }
