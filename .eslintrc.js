@@ -13,7 +13,7 @@ module.exports = {
         version: 'detect',
     },
   },
-  plugins: ["react", "@typescript-eslint", "tailwindcss", "eslint-plugin-tailwindcss"],
+  plugins: ["react", "@typescript-eslint", "tailwindcss"],
   extends: [
     "eslint:recommended", 
     "plugin:@typescript-eslint/recommended", 
@@ -25,7 +25,8 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
-    'plugin:jsx-a11y/recommended',
+    'plugin:jsx-a11y/recommended',,
+    'plugin:tailwindcss/recommended',
   ],
   rules: {
     'no-unused-vars': 'off',

@@ -1,4 +1,6 @@
 .eslintrc.js
 tailwind.config.js
+postcss.config.js
 /webpack
+/build
 *.test.js

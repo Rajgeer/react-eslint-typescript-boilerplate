@@ -3,13 +3,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 // const CopyWebpack = require('copy-webpack-plugin')
 
 module.exports = {
-    entry: path.resolve(__dirname, '..', './src/index.tsx'),
+    entry: path.resolve(__dirname, '..', './src/client/index.tsx'),
     output: {
         path: path.resolve(__dirname, '..', './build'),
         filename: '[name].[chunkhash].js',
     },
     resolve: {
-        extensions: ['.js', '.ts', '.tsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -28,16 +28,16 @@ module.exports = {
                 test: /\.(ts|js)x?$/,
                 exclude: /node_modules/,
                 use: [
-                {
-                    loader: 'babel-loader',
-                },
+                    {
+                        loader: 'babel-loader',
+                    },
                 ],
             },
             
             {
                // should use style-loader and css-loader for all css files
                test: /\.css$/,
-               use: ['style-loader', 'css-loader'],
+               use: ['style-loader', 'css-loader', 'postcss-loader'],
             },
             {
                // v5 supports image loaders out of box
