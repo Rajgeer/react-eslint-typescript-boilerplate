@@ -42,8 +42,17 @@ module.exports = {
             {
                // v5 supports image loaders out of box
                test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-               type: 'assets/resource',
-            },
+               type: 'assets/img',
+               use: [
+                {
+                  loader: 'url-loader',
+                  options: {
+                    limit: 8192, // Convert images smaller than 8kb to base64 strings
+                    name: 'images/[name].[ext]', // Output path for images
+                  },
+                },
+              ],
+            },  
             {
                 test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
                 type: 'assets/inline',
